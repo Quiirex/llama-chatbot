@@ -59,6 +59,8 @@ cfg_if! {
                 context_size: 2048,
                 lora_adapters: None,
                 use_gpu: true,
+                gpu_layers: Some(2),
+                rope_overrides: None,
             };
 
             llm::load::<Llama>(
@@ -76,17 +78,11 @@ cfg_if! {
 
 #[cfg(not(any(feature = "ssr", feature = "csr")))]
 pub fn main() {
-    // no client-side main function
-    // unless we want this to work with e.g., Trunk for pure client-side testing
-    // see lib.rs for hydration function instead
-    // see optional feature `ssg` instead
+
 }
 
 #[cfg(all(not(feature = "ssr"), feature = "csr"))]
-pub fn main() {
-    // a client-side main function is required for using `trunk serve`
-    // prefer using `cargo leptos serve` instead
-    // to run: `trunk serve --open --features ssg`
+pub fn main() {   
     use leptos::*;
     use leptos_start::app::*;
     use wasm_bindgen::prelude::wasm_bindgen;
@@ -94,8 +90,6 @@ pub fn main() {
     console_error_panic_hook::set_once();
 
     leptos::mount_to_body(move |cx| {
-        // note: for testing it may be preferrable to replace this with a
-        // more specific component, although leptos_router should still work
         view! {cx, <App/> }
     });
 }
