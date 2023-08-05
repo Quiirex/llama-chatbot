@@ -17,7 +17,9 @@ pub async fn converse(cx: Scope, prompt: Conversation) -> Result<String, ServerF
     let character_name = "### Assistant";
     let user_name = "### Human";
     let persona = "A chat between a human and an assistant.";
-    let mut history = format!("{character_name}:Hello - How may I help you today?\n\{user_name}:What is the capital of France?\n\{character_name}:Paris is the capital of France.\n");
+    let mut history = format!("{character_name}:Hello - How may I help you today?\n\
+    {user_name}:What is the capital of Slovenia?\n\
+    {character_name}:Ljubljana is the capital of Slovenia.\n");
 
     for message in prompt.messages.into_iter() {
         let msg = message.text;
