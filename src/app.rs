@@ -49,7 +49,7 @@ pub fn App(cx: Scope) -> impl IntoView {
     view! { cx,
         <Stylesheet id="leptos" href="/pkg/leptos_start.css"/>
 
-        <Title text="Llama Chatbot"/>
+        <Title text="LLaMa Chatbot"/>
         <ChatArea conversation/>
         <TypeArea send/>
     }

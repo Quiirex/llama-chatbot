@@ -13,7 +13,7 @@ pub fn TypeArea(cx: Scope, send: Action<String, Result<String, ServerFnError>>) 
            }
            >
                 <input class="w-2/3 p-4 border border-gray-300 rounded-full" type="text" placeholder="Enter your prompt" node_ref=input_ref/>
-                <input class="h-full p-4 bg-blue-500 text-white rounded-full cursor-pointer" type="submit"/>
+                <input class="h-full p-4 bg-red-500 text-white rounded-full cursor-pointer" type="submit"/>
            </form>
         </div>
     }
