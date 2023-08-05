@@ -2,8 +2,7 @@
     <img src="https://www.pngmart.com/files/22/Llama-PNG.png" alt="Logo" width="150" height="150">
 </p>
 
-# LLaMa Chatbot
-
+<h1 align="center">LLaMa Chatbot</h1>
 This web application is designed to demonstrate the capability of creating a basic chatbot web application using Rust, Leptos, TailwindCSS, and an open-source language model like GPT, LLaMA, or similar variants.
 
 ## Running the chatbot
