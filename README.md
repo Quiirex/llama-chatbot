@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">LLaMa Chatbot</h1>
-This web application is a proof-of-concept that demonstrates the ability to create a basic chatbot web application using Rust, Leptos, TailwindCSS, and an open-source language model like GPT, LLaMA, or similar variants.
+This web application is a proof-of-concept that demonstrates the ability to create a basic chatbot web application using Rust, Leptos, TailwindCSS, and an open-source large language model like GPT, LLaMA, or similar variants.
 
 ## Using an LLM
 
